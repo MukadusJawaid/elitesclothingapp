@@ -21,7 +21,7 @@ const schema = yup.object().shape({
     .required("Password is required"),
 });
 
-const AuthForm = ({ isLogin }) => {
+const AuthForm = ({ isLogin, user }) => {
   const router = useRouter();
   const {
     register,
@@ -48,7 +48,9 @@ const AuthForm = ({ isLogin }) => {
   return (
     <div className={classes.mainDiv}>
       <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
-        <div className={classes.heading}>{isLogin ? "Login" : "Sign Up"}</div>
+        <div className={classes.heading}>
+          {isLogin ? (user === "isAdmin" ? "Admin Login" : "Login") : "Sign Up"}
+        </div>
         {!isLogin && (
           <div className={classes.inputContainer}>
             <CustomInput
@@ -87,14 +89,18 @@ const AuthForm = ({ isLogin }) => {
         <div className={classes.buttonContainer}>
           <Button
             onClick={() =>
-              isLogin ? router?.push("/products") : router?.push("/login")
+              isLogin
+                ? user === "isAdmin"
+                  ? router?.push("/admin/dashboard")
+                  : router?.push("/products")
+                : router?.push("/login")
             }
             type="submit"
           >
             {isLogin ? "Login" : "Register"}
           </Button>
         </div>
-        {isLogin && (
+        {isLogin && !user && (
           <div className={classes.signUpLink}>
             {` Don't have an account? `}
             <a href="/sign-up">SignUp</a>
