@@ -1,0 +1,13 @@
+.heading {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-block: 30px;
+  text-align: center;
+}
+.button {
+  background-color: var(--primary-color) !important;
+  color: var(--white-color) !important;
+  width: 100%;
+  margin-bottom: 40px;
+}

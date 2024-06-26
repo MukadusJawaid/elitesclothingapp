@@ -1,0 +1,9 @@
+.button {
+  background-color: var(--primary-color) !important;
+  color: var(--white-color) !important;
+  width: 100%;
+}
+.heading {
+  color: var(--primary-color);
+  text-align: center;
+}

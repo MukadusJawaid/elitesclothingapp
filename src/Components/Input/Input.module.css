@@ -1,0 +1,34 @@
+/* components/Input.module.css */
+.inputContainer {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.customInput {
+  background-color: var(--white-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 7px;
+  padding: 15px;
+  outline: none;
+  transition: outline 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.customInput::placeholder {
+  color: var(--placeholder-color);
+  opacity: 1;
+}
+
+.customInput.focused {
+  outline: 2px solid var(--primary-color);
+}
+
+.passwordIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
