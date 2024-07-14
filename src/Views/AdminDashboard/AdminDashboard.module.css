@@ -1,0 +1,28 @@
+.heroSection {
+  /* background-image: url("/images/hero.jpg"); */
+  background-color: var(--primary-color);
+  background-size: cover;
+  background-position: center;
+  color: var(--white-color);
+  padding: 100px 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.productTableContainer {
+  padding: 20px;
+}
+
+.tableHeading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
